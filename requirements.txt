@@ -1,0 +1,7 @@
+pgvector
+sqlmodel
+pydantic
+pydantic-settings
+psycopg2-binary
+nltk
+cohere

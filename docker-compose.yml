@@ -1,0 +1,21 @@
+# Use postgres/example user/password credentials
+version: '3.9'
+
+services:
+
+  db:
+    image: ankane/pgvector
+    ports:
+      - 5432:5432
+    volumes:
+      - ~/apps/postgres2:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=S3cret
+      - POSTGRES_USER=citizix_user
+      - POSTGRES_DB=rag
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
